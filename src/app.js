@@ -11,7 +11,7 @@ function clickedBtn(_event) {
   event.preventDefault();
   let currentCity = document.querySelector("#city");
   let searchdCity = document.querySelector("#city-input");
-  console.log(searchdCity.value);
+  //console.log(searchdCity.value);
   currentCity.innerHTML = searchdCity.value;
   axios
     .get(
@@ -19,9 +19,22 @@ function clickedBtn(_event) {
     )
     .then(showTemperature);
 }
+function handleInput(_event) {
+  let searchCity = document.querySelector("#city-input").value;
+  let currentCity = document.querySelector("#city");
+  console.log(searchCity);
+  currentCity.innerHTML = searchCity;
+  axios
+    .get(
+      `https://api.openweathermap.org/data/2.5/weather?q=${searchCity.value}&units=metric&appid=${apiKey}`
+    )
+    .then(showTemperature);
+}
 
 let btnSearch = document.querySelector("#searchBtn");
 btnSearch.addEventListener("click", clickedBtn);
+let searchCity = document.querySelector("#search-form");
+searchCity.addEventListener("submit", handleInput);
 
 //date
 let days = [

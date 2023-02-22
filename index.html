@@ -16,83 +16,84 @@
   <body>
     <div class="container">
       <div class="weatherApp">
-        <div class="row search-engine">
-          <div class="col-1"></div>
-          <div class="col-8">
-            <input
-              type="search"
-              placeholder="City"
-              class="form-control shadow-sm"
-              autofocus="on"
-              autocomplete="off"
-              id="city-input"
-            />
+        <form class="search-form" id="search-form">
+          <div class="row search-engine">
+            <div class="col-1"></div>
+            <div class="col-8">
+              <input
+                type="search"
+                placeholder="City"
+                class="form-control shadow-sm"
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm"
+                id="searchBtn"
+              />
+            </div>
           </div>
-          <div class="col-3">
-            <input
-              type="submit"
-              value="Search"
-              class="form-control btn btn-primary shadow-sm"
-              id="searchBtn"
-            />
+          <div class="row">
+            <div class="col-9 location">
+              <div id="currentLocText"></div>
+            </div>
+            <div class="col-3 currLocation">
+              <input
+                type="submit"
+                value="Current Location"
+                class="form-control btn btn-primary shadow-sm"
+                id="locationBtn"
+              />
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-9 location">
-            <div id="currentLocText"></div>
+          <div class="row">
+            <div class="col-9"></div>
+            <div class="col-2 city">
+              <div class="topIcon">☀️</div>
+              <h1 id="city">Zurich</h1>
+              <div class="date" id="time">Day</div>
+              <span class="temperature" id="currTemp"> 7</span>
+              <span class="units">
+                <a href="a" id="celsius-link">°C</a> |
+                <a href="a" id="farenheit-link">°F</a></span
+              >
+            </div>
           </div>
-          <div class="col-3 currLocation">
-            <input
-              type="submit"
-              value="Current Location"
-              class="form-control btn btn-primary shadow-sm"
-              id="locationBtn"
-            />
+          <div class="row forecast">
+            <div class="col-1"></div>
+            <div class="col-2">
+              <div class="icon">🌤</div>
+              Day 1<br />
+              6°
+            </div>
+            <div class="col-2">
+              <div class="icon">☁️</div>
+              Day 2<br />
+              5°
+            </div>
+            <div class="col-2">
+              <div class="icon">🌧</div>
+              Day 3<br />
+              3°
+            </div>
+            <div class="col-2">
+              <div class="icon">🌨</div>
+              Day 4<br />
+              1°
+            </div>
+            <div class="col-2">
+              <div class="icon">🌦</div>
+              Day 5<br />
+              2°
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-9"></div>
-          <div class="col-2 city">
-            <div class="topIcon">☀️</div>
-            <h1 id="city">Zurich</h1>
-            <div class="date" id="time">Day</div>
-            <span class="temperature" id="currTemp"> 7</span>
-            <span class="units">
-              <a href="a" id="celsius-link">°C</a> |
-              <a href="a" id="farenheit-link">°F</a></span
-            >
-          </div>
-        </div>
-        <div class="row forecast">
-          <div class="col-1"></div>
-          <div class="col-2">
-            <div class="icon">🌤</div>
-            Day 1<br />
-            6°
-          </div>
-          <div class="col-2">
-            <div class="icon">☁️</div>
-            Day 2<br />
-            5°
-          </div>
-          <div class="col-2">
-            <div class="icon">🌧</div>
-            Day 3<br />
-            3°
-          </div>
-          <div class="col-2">
-            <div class="icon">🌨</div>
-            Day 4<br />
-            1°
-          </div>
-          <div class="col-2">
-            <div class="icon">🌦</div>
-            Day 5<br />
-            2°
-          </div>
-        </div>
+        </form>
       </div>
-      <a href="https://github.com/cephalopodix/WeatherApp">GitHub Link</a>
     </div>
     <script src="src/app.js"></script>
   </body>
